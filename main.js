@@ -5,7 +5,7 @@ function getPlayer(name, hp, img, weapon){
     this.weapon = weapon;
     this.attack = function(){
         console.log(this.name + ' ' + 'Fight...');
-    } 
+    }; 
 }
 
 const player1 = new getPlayer('Scorpion', 90,
