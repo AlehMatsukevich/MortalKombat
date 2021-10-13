@@ -20,6 +20,8 @@ console.log(player2);
 console.log(player1.attack());
 console.log(player2.attack());
 
+const $ARENAS = document.querySelector('.arenas');
+
 function createPlayer(className, player){
     const $PLAYER = document.createElement('div');
     $PLAYER.classList.add(className);
@@ -27,10 +29,10 @@ function createPlayer(className, player){
             $PROGRESSBAR.classList.add('progressbar');
             const $LIFE = document.createElement('div');
             $LIFE.classList.add('life');
-            $LIFE.style.width = '100%';
-            $LIFE.style.fontWeight = 'bold';
-            $LIFE.style.color = '#fff';
-            $LIFE.innerText = player.hp;
+            $LIFE.style.width = player.hp +'%';
+            // $LIFE.style.fontWeight = 'bold';
+            // $LIFE.style.color = '#fff';
+            // $LIFE.innerText = player.hp;
 
             const $NAME = document.createElement('div');
             $NAME.classList.add('name');
@@ -45,7 +47,6 @@ function createPlayer(className, player){
             $CHARACTER.appendChild($IMG);
     $PLAYER.appendChild($PROGRESSBAR);
     $PLAYER.appendChild($CHARACTER);
-    const $ARENAS = document.querySelector('.arenas');
     $ARENAS.appendChild($PLAYER);
 }
 
